@@ -6,8 +6,6 @@ use Mojo::Base 'Mojolicious::Sessions::Store::Backend', -signatures;
 use Mojo::JSON qw(encode_json decode_json);
 use Mojo::File;
 
-our $VERSION = '0.01';
-
 has 'store_dir';    # directory where session files are stored
 
 sub new ($class, %args) {

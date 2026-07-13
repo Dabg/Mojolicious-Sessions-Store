@@ -4,8 +4,6 @@ package Mojolicious::Sessions::Store::Backend;
 
 use Mojo::Base -base, -signatures;
 
-our $VERSION = '0.01';
-
 sub load ($self, $session_id) {
     die "Method 'load' must be implemented by backend";
 }

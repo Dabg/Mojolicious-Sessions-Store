@@ -5,8 +5,6 @@ package Mojolicious::Sessions::Store;
 use Mojo::Base 'Mojolicious::Sessions', -signatures;
 use Bytes::Random::Secure;
 
-our $VERSION = '0.01';
-
 has 'backend';    # backend instance (Mojolicious::Sessions::Store::Backend)
 
 # ── Session ID management ───────────────────────────────────────────────
