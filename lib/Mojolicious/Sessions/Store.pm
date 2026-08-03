@@ -3,7 +3,7 @@ package Mojolicious::Sessions::Store;
 # ABSTRACT: another server-side session storage for Mojolicious
 
 use Mojo::Base 'Mojolicious::Sessions', -signatures;
-use Bytes::Random::Secure;
+use Mojo::Util qw(random_bytes);
 
 has 'backend';    # backend instance (Mojolicious::Sessions::Store::Backend)
 
@@ -20,8 +20,7 @@ sub _session_id ($self, $c) {
 }
 
 sub _generate_session_id ($self) {
-    my $random = Bytes::Random::Secure->new;
-    return unpack('H*', $random->bytes(32));
+    return unpack('H*', random_bytes(32));
 }
 
 # ── Override load() ─────────────────────────────────────────────────────
