@@ -1,6 +1,8 @@
 Revision history for Mojolicious-Sessions-Store
 
 {{$NEXT}}
+    - Replace Bytes::Random::Secure with Mojo::Util::random_bytes
+    - Add issues = 1 to GithubMeta to point bugtracker to GitHub issues
 
 0.01      2026-07-14 17:19:59+02:00 Europe/Paris
     - Initial release
